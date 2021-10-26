@@ -1,0 +1,161 @@
+$tablet-size: 500px;
+$desktop-size: 1000px;
+
+@mixin tablet{
+    @media screen and (min-width: $tablet-size) {
+        @content;
+    }
+}
+
+@mixin mobile{
+    @media screen and (max-width: $tablet-size){
+        @content;
+    }
+}
+
+@mixin desktop{
+    @media screen and (min-width: $desktop-size){
+        @content;
+    }
+}
+
+@include tablet {
+    .grid {
+        > .tb-col-12 {
+            float: left;
+            width: 100%;
+            background-color: lavender;
+          }
+          
+        > .tb-col-8 {
+            float: left;
+            width: calc(100%/12*8);
+            background-color: lightyellow;
+          }
+          
+        > .tb-col-6 {
+            float: left;
+            width: calc(100%/2);
+            height: 600px;
+            background-color: lightcoral;
+          }
+          
+        > .tb-col-4 {
+            float: left;
+            width: calc(100%/12*4);
+            background-color: lavender;
+          }
+          
+        > .tb-col-3 {
+            float: left;
+            width: calc(100%/12*3);
+            background-color: lavender;
+          }
+          
+        > .tb-col-2 {
+            float: left;
+            width: calc(100%/12*2);
+            background-color: gray;
+          }
+          
+        > .tb-col-1 {
+            float: left;
+            width: calc(100%/12);
+            background-color: blueviolet;
+          }  
+    }
+}
+
+@include mobile {
+    .grid {
+        > .mb-col-12 {
+            float: left;
+            width: 100%;
+            background-color: lightgreen;
+          }
+          
+        > .mb-col-8 {
+            float: left;
+            width: calc(100%/12*8);
+            height: 600px;
+            background-color: cornflowerblue;
+          }
+          
+        > .mb-col-6 {
+            float: left;
+            width: calc(100%/2);
+            background-color: red;
+          }
+          
+        > .mb-col-4 {
+            float: left;
+            width: calc(100%/12*4);
+            background-color: lavender;
+          }
+          
+        > .mb-col-3 {
+            float: left;
+            width: calc(100%/12*3);
+            background-color: lavender;
+          }
+          
+        > .mb-col-2 {
+            float: left;
+            width: calc(100%/12*2);
+            background-color: gray;
+          }
+          
+        > .mb-col-1 {
+            float: left;
+            width: calc(100%/12);
+            background-color: blueviolet;
+          }  
+    }
+}
+
+@include desktop {
+    .grid {
+        > .col-12 {
+            float: left;
+            width: 100%;
+            background-color: lightgreen;
+          }
+          
+        > .col-8 {
+            float: left;
+            width: calc(100%/12*8);
+            background-color: lightyellow;
+          }
+          
+        > .col-6 {
+            float: left;
+            width: calc(100%/2);
+            background-color: red;
+          }
+          
+        > .col-4 {
+            float: left;
+            width: calc(100%/12*4);
+            background-color: yellowgreen;
+          }
+          
+        > .col-3 {
+            float: left;
+            width: calc(100%/12*3);
+            height: 600px;
+            background-color: lavender;
+          }
+          
+        > .col-2 {
+            float: left;
+            width: calc(100%/12*2);
+            background-color: gray;
+          }
+          
+        > .col-1 {
+            float: left;
+            width: calc(100%/12);
+            background-color: blueviolet;
+          }  
+    }
+}

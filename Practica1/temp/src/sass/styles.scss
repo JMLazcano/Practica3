@@ -1,0 +1,38 @@
+@import 'grid';
+
+.container {
+  max-width: 95%;
+  margin: 0 auto;
+  font-family: "Arial"
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+button.primary {
+  background-color: gray;
+}
+
+.temas {
+  border: solid 1px red;
+}
+
+.temas > div {
+  text-align: center;
+  width: 100%;
+  background-color: lightblue;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+.ALIN {
+  text-align: center;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
